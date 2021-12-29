@@ -3,10 +3,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
   <link rel="stylesheet" href="./css/styles.css">
   <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/sensor.css">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.js"></script>
   
-  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+  
   <title>Cannastation</title>
 </head>
 <body>
@@ -23,46 +27,77 @@
     <nav>
       <ul class="nav__links">
         <li class="nav__board">My Board</li>
-        <li><a href="#"><span class="fas fa-user"></span> Profile</a></li>
-        <i class="far fa-user" aria-hidden="true"></i>
-        
+        <li><span class="fa fa-user"></span>Profile</li>
       </ul>    
     </nav>
     
   </header>
 
   <main>
-    
+
     <section class="status">
       <p>Board: XPTO 1234</p>
-      <p>Board Status: On</p>
+      <p>Board Status: Online</p>
       <p>Last Update: 28/12/2021 18:00</p>
     </section>
     
-    <section class="sensors">
-      <ul class='sensor-cards'>
-        <li class='sensor-card'>
-          <h3>Temperature</h3>
-          <p>Online</p>
-          <p>Turn Off/On</p>
-          <p>Mode: Manual</p>
-          <button>Advanced</button> 
-        </li>
-        <li class='sensor-card'>
-          <h3>Air Humidity</h3>
-          <p>Online</p>
-          <p>Turn Off/On</p>
-          <p>Mode: Manual</p>
-          <button>Advanced</button> 
-        </li>
-        <li class='sensor-card'>
-          <h3>Soil Humidity</h3>
-          <p>Online</p>
-          <p>Turn Off/On</p>
-          <p>Mode: Manual</p>
-          <button>Advanced</button> 
-        </li>
-      </ul>
+    <section class="sensor">
+      <div class="sensor__data">
+        <h3 class="sensor__title">Sensors</h3>
+        <ul class='sensor__cards'>
+          <li class='sensor__card'>
+            <h3>Temperature</h3>
+            <i class="fa fa-home fa-2x"></i>
+            <h2>18º</h2>
+            <div class="sensor__line">
+              <p>Online</p>
+              <img src="img/icons/lightbulb_black_24dp.svg" alt="logo">
+            </div>
+
+            <div class="sensor__line">
+              <p>Turn Off</p>
+              <img src="img/icons/toggle_off_black_24dp.svg" alt="logo">
+            </div>
+            
+            <p>Mode: Manual</p>
+            <button>Advanced</button> 
+          </li>
+          <li class='sensor__card'>
+            <h3>Air Humidity</h3>
+            <i class="fa fa-home fa-2x"></i>
+            <h2>18º</h2>
+            <div class="sensor__line">
+              <p>Online</p>
+              <img src="img/icons/lightbulb_black_24dp.svg" alt="logo">
+            </div>
+
+            <div class="sensor__line">
+              <p>Turn Off</p>
+              <img src="img/icons/toggle_off_black_24dp.svg" alt="logo">
+            </div>
+            
+            <p>Mode: Manual</p>
+            <button>Advanced</button> 
+          </li>
+          <li class='sensor__card'>
+            <h3>Soil Humidity</h3>
+            <i class="fa fa-home fa-2x"></i>
+            <h2>18º</h2>
+            <div class="sensor__line">
+              <p>Online</p>
+              <img src="img/icons/lightbulb_black_24dp.svg" alt="logo">
+            </div>
+
+            <div class="sensor__line">
+              <p>Turn Off</p>
+              <img src="img/icons/toggle_off_black_24dp.svg" alt="logo">
+            </div>
+            
+            <p>Mode: Manual</p>
+            <button>Advanced</button> 
+          </li>
+        </ul>
+      </div>
     </section>
 
     <section class="controls">
