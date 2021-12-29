@@ -85,6 +85,10 @@
   margin: 2px 0px 0px 2px;
 }
 
+.fa-temperature-high {
+  margin-left: 10px;
+}
+
 /* No idea what I am doing.. use p, span? where is the best place to put margin etc. */
 .sensor__card p {
   font-size: 12px;
@@ -115,4 +119,8 @@
 .sensor__card button:hover {
   color: 34843c;
   background-color: #f3f6fa;
+}
+
+.fa-lightbulb {
+  color: blueviolet;
 }
