@@ -7,7 +7,10 @@
   
   <link rel="stylesheet" href="./css/styles.css">
   <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/status.css">
+  <link rel="stylesheet" href="./css/cards.css">
   <link rel="stylesheet" href="./css/sensor.css">
+  <link rel="stylesheet" href="./css/control.css">
   
   
   
@@ -41,10 +44,10 @@
       <p>Last Update: 28/12/2021 18:00</p>
     </section>
     
-    <section class="sensor">
-      <div class="sensor__data">
-        <h3 class="sensor__title">Sensors</h3>
-        <ul class='sensor__cards'>
+    <section class="main">
+      <div class="main__data">
+        <h3 class="main__title">Sensors</h3>
+        <ul class='main__cards'>
           <li class='sensor__card'>
             <h3>Temperature</h3>
             <i class="fas fa-solid fa-temperature-high fa-2x color__green"></i>
@@ -64,50 +67,63 @@
       </div>
     </section>
 
-    <section class="sensor">
-      <div class="sensor__data">
-        <h3 class="sensor__title">Controls</h3>
-        <ul class='sensor__cards'>
-          <li class='sensor__card'>
-            <h3>Light</h3>
-            <i class="far fa-lightbulb fa-lg color__green fa-2x"></i>
-            <div class="sensor__line">
-              <p>Online</p>
-              <i class="fas fa-solid fa-power-off color__green"></i>
+    <section class="main">
+      <div class="main__data">
+        <h3 class="main__title">Controls</h3>
+        <ul class='main__cards'>
+          <li class='control__card'>
+            <div class="control__card__head">
+              <h3>Light</h3>
+              <i class="far fa-lightbulb fa-lg color__green fa-2x"></i>
+            </div>
+            <div class="control__card__lines">
+              <ul class="control__line">
+                <li>Online</li>
+                <li class="fas fa-solid fa-power-off color__green"></li>
+              </ul>
+              <ul class="control__line">
+                <li>Turn Off</li>
+                <li><img src="img/icons/toggle_off_black_24dp.svg" alt="logo"></li>
+              </ul>
+
+              <ul class="control__line">
+                <li>Mode</li>
+                <li>Manual</li>
+              </ul>
+
+              <ul class="control__line">
+                <button>Advanced</button>
+              </ul>
+              
             </div>
 
-            <div class="sensor__line">
-              <p>Turn Off</p>
-              <img src="img/icons/toggle_off_black_24dp.svg" alt="logo">
-            </div>
             
-            <p>Mode: Manual</p>
-            <button>Advanced</button> 
+            
           </li>
-          <li class='sensor__card'>
+          <li class='control__card'>
             <h3>Fan</h3>
             <i class="fas fa-solid fa-fan color__red fa-2x"></i>
-            <div class="sensor__line">
+            <div class="control__line">
               <p>Offline</p>
               <i class="fas fa-solid fa-power-off color__red"></i>
             </div>
 
-            <div class="sensor__line">
+            <div class="control__line">
               <p>Turn On</p>
               <img src="img/icons/toggle_off_black_24dp.svg" alt="logo">
             </div>
             <p>Mode: Manual</p>
-            <button>Advanced</button> 
+            <button>Advanced</button>
           </li>
-          <li class='sensor__card'>
+          <li class='control__card'> 
             <h3>Exaust</h3>
             <i class="fas fa-solid fa-soap fa-2x color__green"></i>
-            <div class="sensor__line">
+            <div class="control__line">
               <p>Online</p>
               <i class="fas fa-solid fa-power-off color__green"></i>
             </div>
 
-            <div class="sensor__line">
+            <div class="control__line">
               <p>Turn Off</p>
               <img src="img/icons/toggle_off_black_24dp.svg" alt="logo">
             </div>
@@ -116,15 +132,15 @@
             <button>Advanced</button> 
           </li>
 
-          <li class='sensor__card'>
+          <li class='control__card'>
             <h3>Water</h3>
             <i class="fas fa-solid fa-shower fa-2x color__red"></i>
-            <div class="sensor__line">
+            <div class="control__line">
               <p>Offline</p>
               <i class="fas fa-solid fa-power-off color__red"></i>
             </div>
 
-            <div class="sensor__line">
+            <div class="control__line">
               <p>Turn Off</p>
               <img src="img/icons/toggle_off_black_24dp.svg" alt="logo">
             </div>
