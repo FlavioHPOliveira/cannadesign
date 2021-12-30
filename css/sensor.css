@@ -37,7 +37,7 @@
 .sensor__title {
   font-size: 16px;
   text-align: left;
-  margin-left: 17px;
+  margin-left: 11px;
   margin-top: 12px;
   margin-bottom: 0px;
   padding: 0px;
@@ -58,9 +58,10 @@
   flex-flow: nowrap column;
   justify-content: space-around;
   align-items: center;
-  flex: 1 1 1;
+  flex: 1 1 0;
   max-width: 200px;
   min-width: 120px;
+  min-height: 140px;
   color: #282828;
   background-color: #005a2d05;
   border: 1px solid #e1e1e1;
