@@ -37,7 +37,7 @@
 .sensor__title {
   font-size: 16px;
   text-align: left;
-  margin-left: 17px;
+  margin-left: 11px;
   margin-top: 12px;
   margin-bottom: 0px;
   padding: 0px;
@@ -58,11 +58,12 @@
   flex-flow: nowrap column;
   justify-content: space-around;
   align-items: center;
-  flex: 1 1 1;
+  flex: 1 1 0;
   max-width: 200px;
   min-width: 120px;
+  min-height: 140px;
   color: #282828;
-  background-color: #f3faf5;
+  background-color: #005a2d05;
   border: 1px solid #e1e1e1;
   border-radius: 12px;
   padding: 5px 40px 15px 40px;
@@ -70,7 +71,6 @@
   margin: 5px 10px;
   margin-top: 5px;
   margin-bottom: 5px;
-  box-shadow: 1px 1px 1px rgba(56, 56, 56, 0.25);
 }
 
 .sensor__card h3 {
@@ -83,6 +83,10 @@
 .sensor__card h2 {
   font-size: 1.6em;
   margin: 2px 0px 0px 2px;
+}
+
+.fa-temperature-high {
+  margin-left: 10px;
 }
 
 /* No idea what I am doing.. use p, span? where is the best place to put margin etc. */
@@ -98,7 +102,7 @@
   margin-top: 20px;
   padding: 10px;
   background: #ffffff;
-  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
+
   border-radius: 20px;
   cursor: pointer;
   font-size: 12px;
@@ -113,6 +117,15 @@
 }
 
 .sensor__card button:hover {
-  color: 34843c;
+  color: rgb(3, 168, 77);
   background-color: #f3f6fa;
+}
+
+/* Can I do this to color stuff? want use same color for all icons */
+.color__green {
+  color: rgb(3, 168, 77);
+}
+
+.color__red {
+  color: rgb(216, 34, 34);
 }
