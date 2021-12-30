@@ -38,31 +38,3 @@
   font-size: 14px;
   font-weight: inherit;
 }
-
-.status__content ul {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.status__content li {
-  flex: 1 0 1;
-}
-
-.status p {
-  margin: 5px 5px 5px 5px;
-  flex: 1 1 0;
-}
-
-.status p:nth-child(1) {
-  text-align: left;
-}
-
-.status p:nth-child(2) {
-  text-align: center;
-}
-
-.status p:nth-child(3) {
-  text-align: right;
-}
