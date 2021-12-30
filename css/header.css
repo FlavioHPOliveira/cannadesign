@@ -4,7 +4,7 @@ header {
   align-items: center;
   font-size: 14px;
   padding: 15px 10%;
-  color: #757575;
+  color: #949090;
   box-shadow: 0 1px 3px 0 rgb(0 0 0 / 4%), 0 1px 1px 0 rgb(0 0 0 / 4%),
     0 2px 1px -1px rgb(0 0 0 / 4%);
 }
@@ -15,7 +15,7 @@ header a {
 }
 
 .header__logo:hover {
-  color: 34843c;
+  color: rgb(3, 168, 77);
 }
 
 header img {
@@ -44,7 +44,7 @@ header img {
 }
 
 .nav__links li:hover {
-  color: 34843c;
+  color: rgb(3, 168, 77);
   background-color: #f3f6fa;
   transition: all 0.2s ease 0s;
 }
@@ -57,7 +57,13 @@ header img {
   margin-right: 10px;
   padding: 10px;
   background: #ffffff;
-  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
+  box-shadow: 2px 2px 3px rgba(163, 150, 150, 0.25);
   border-radius: 20px;
   cursor: pointer;
+}
+
+.selected {
+  color: rgb(3, 168, 77);
+  /* background-color: #f3f6fa; */
+  transition: all 0.2s ease 0s;
 }

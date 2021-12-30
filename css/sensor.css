@@ -62,7 +62,7 @@
   max-width: 200px;
   min-width: 120px;
   color: #282828;
-  background-color: #f3faf5;
+  background-color: #005a2d05;
   border: 1px solid #e1e1e1;
   border-radius: 12px;
   padding: 5px 40px 15px 40px;
@@ -117,10 +117,15 @@
 }
 
 .sensor__card button:hover {
-  color: 34843c;
+  color: rgb(3, 168, 77);
   background-color: #f3f6fa;
 }
 
-.fa-lightbulb {
-  color: blueviolet;
+/* Can I do this to color stuff? want use same color for all icons */
+.color__green {
+  color: rgb(3, 168, 77);
+}
+
+.color__red {
+  color: rgb(216, 34, 34);
 }
