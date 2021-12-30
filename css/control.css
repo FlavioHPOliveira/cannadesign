@@ -34,6 +34,9 @@
   flex: 1 1 auto;
   font-size: 13px;
 }
+.fa-lightbulb {
+  height: 32px;
+}
 
 .control__card button {
   color: #757575;
