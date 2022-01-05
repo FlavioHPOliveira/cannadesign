@@ -4,7 +4,8 @@
 }
 
 .main__data {
-  width: 60%;
+  width: 950px;
+  padding: 0 24px;
   margin: auto;
 }
 
@@ -42,7 +43,7 @@
 
 /* Can I do this to color stuff? want use same color for all icons */
 .color__green {
-  color: rgb(66, 172, 101);
+  color: var(--main-color);
 }
 
 .color__red {
