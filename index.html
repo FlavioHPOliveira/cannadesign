@@ -28,8 +28,12 @@
     // Listen for messages
     socket.addEventListener('message', function (event) {
         console.log('Message from server ', event.data);
-        console.log(document.getElementById("temperature").innerHTML)
-        document.getElementById("temperature").innerHTML = event.data;
+        //console.log(document.getElementById("temperature").innerHTML)
+
+        sensorData = JSON.parse(event.data)
+        document.getElementById("temperature").innerHTML = sensorData.temperature;
+        document.getElementById("airHumidity").innerHTML = sensorData.airHumidity;
+        document.getElementById("soilMoisture").innerHTML = sensorData.soilMoisture;
 
     });
 
@@ -85,12 +89,12 @@
           <li class='sensor__card'>
             <h3>Air Humidity</h3>
             <i class="fas fa-solid fa-wind fa-2x color__red"></i>
-            <h2>18º</h2>
+            <h2 id="airHumidity">18º</h2>
           </li>
           <li class='sensor__card'>
             <h3>Soil Humidity</h3>
             <i class="fas fa-solid fa-spa fa-2x color__green"></i>
-            <h2>18º</h2>
+            <h2 id="soilMoisture">18º</h2>
           </li>
         </ul>
       </div>
