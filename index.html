@@ -16,6 +16,28 @@
 </head>
 <body>
 
+  <script>
+    // Create WebSocket connection.
+    const socket = new WebSocket('ws://localhost:3000');
+
+    // Connection opened
+    socket.addEventListener('open', function (event) {
+        console.log('Connected to WS Server')
+    });
+
+    // Listen for messages
+    socket.addEventListener('message', function (event) {
+        console.log('Message from server ', event.data);
+        console.log(document.getElementById("temperature").innerHTML)
+        document.getElementById("temperature").innerHTML = event.data;
+
+    });
+
+    const sendMessage = () => {
+        socket.send('Hello From Client1!');
+    }
+</script>
+
   <header>
     <a class="header__logo" href=""><img src="img/green-cannabis-leaf-simple-drawing-vector.jpg" alt="logo"></img>Cannastation</a>
     <nav>
@@ -58,7 +80,7 @@
           <li class='sensor__card'>
             <h3>Temperature</h3>
             <i class="fas fa-solid fa-temperature-high fa-2x color__green"></i>
-            <h2>18º</h2>
+            <h2 id="temperature">18º</h2>
           </li>
           <li class='sensor__card'>
             <h3>Air Humidity</h3>
