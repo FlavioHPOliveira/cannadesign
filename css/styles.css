@@ -1,3 +1,7 @@
+:root {
+  --main-color: rgb(66, 172, 101);
+}
+
 body {
   margin: 0px;
   padding: 0px;
