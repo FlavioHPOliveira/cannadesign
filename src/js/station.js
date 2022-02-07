@@ -49,7 +49,8 @@ monitorAuthState().then( async  (user)=>{
     // Create WebSocket connection.
     
     //const socket = new WebSocket(`ws://localhost:3000/?token=${docSnap.data().boardDefault}?clientType=app`);
-    const socket = new WebSocket(`ws://cannastation.herokuapp.com/?token=${docSnap.data().boardDefault}?clientType=app`);
+    const socket = new WebSocket(`wss://cannastation.herokuapp.com/?token=${docSnap.data().boardDefault}?clientType=app`);
+    console.log(socket)
 
     const btnLightManual    = document.querySelector("#controlLight")  
     const btnFanManual      = document.querySelector("#controlFan")
