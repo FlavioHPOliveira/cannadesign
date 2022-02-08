@@ -2,222 +2,171 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0" />
-  <script src="https://kit.fontawesome.com/ae320467ae.js" crossorigin="anonymous"></script>
 
-  <link rel="stylesheet" href="./css/styles.css">
-  <link rel="stylesheet" href="./css/header.css">
-  <link rel="stylesheet" href="./css/status.css">
-  <link rel="stylesheet" href="./css/cards.css">
-  <link rel="stylesheet" href="./css/sensor.css">
-  <link rel="stylesheet" href="./css/control.css">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0" /> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <!-- <script src="https://kit.fontawesome.com/ae320467ae.js" crossorigin="anonymous"></script> -->
+  <!-- font awesome cdn link  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <!-- custom css file link  -->
+  <link rel="stylesheet" href="src/css/index_styles.css">
   
   <title>Cannastation</title>
 </head>
 <body>
 
-  <script>
-    // Create WebSocket connection.
-    const socket = new WebSocket('ws://localhost:3000');
 
-    // Connection opened
-    socket.addEventListener('open', function (event) {
-        console.log('Connected to WS Server')
-    });
-
-    // Listen for messages
-    socket.addEventListener('message', function (event) {
-        console.log('Message from server ', event.data);
-        //console.log(document.getElementById("temperature").innerHTML)
-
-        sensorData = JSON.parse(event.data)
-        document.getElementById("temperature").innerHTML = sensorData.temperature;
-        document.getElementById("airHumidity").innerHTML = sensorData.airHumidity;
-        document.getElementById("soilMoisture").innerHTML = sensorData.soilMoisture;
-
-    });
-
-    const sendMessage = () => {
-        socket.send('Hello From Client1!');
-    }
-</script>
 
   <header>
-    <a class="header__logo" href=""><img src="img/green-cannabis-leaf-simple-drawing-vector.jpg" alt="logo"></img>Cannastation</a>
-    <nav>
-        <ul class="nav__links">
-            <li><i class="fas fa-info-circle nav__icon"></i>How it works</li>
-            <li><i class="fas fa-hand-holding-heart nav__icon"></i>Community</li>
-            <li><i class="fas fa-money-check-alt nav__icon"></i>Plans</li>
-        </ul>
+    <!-- <a class="header__logo" href=""><img src="src/img/green-cannabis-leaf-simple-drawing-vector.jpg" alt="logo"></img>Cannastation</a> -->
+    <a class="logo" href="#"><i class="fas fa-cannabis"></i>Cannastation.</a>
+
+    <nav class="navbar">
+      <a class="active" href="#home">home</a>
+      <a href="#about"><i class="fas fa-info-circle"></i> How it works</a>
+      <a href="#menu"><i class="fas fa-money-check-alt"></i> Plans</a>
     </nav>
-    <nav>
-      <ul class="nav__links">
-        <li class="nav__board selected"><i class="fas fa-solid fa-leaf nav__icon"></i>My Station</li>
-        <li><span class="fa fa-user nav__icon"></span>Profile</li>
-      </ul>    
-    </nav>
+
+    <div class="icons">
+        <i class="fas fa-bars" id="menu-bars"></i>
+        <a id="myStation" class="fas fa-solid fa-leaf"></a><span>My Station</span>
+        <a class="fa fa-user"></a><span id="profile">Profile</span>
+    </div>
     
   </header>
 
-  <main>
+  <section class="home" id="home">
+    <div class="content">
+      <span>be free</span>
+      <h3>Growing made easy.</h3>
+      <p>Save time and money by Automating your growth with Cannastation</p>
+      <a href="#" class="btn">order now</a>
+    </div>
+    <div class="image">
+      <img src="src/img/home-1.jpg" alt="">
+    </div>
+  </section>
 
-    <section class="status">
-      <div class="status__welcome">
-        <h2>Welcome Flavio  👋</h2>
-        
-        <h3>Set up your station and start growing your seeds!</h3>
-      </div>
-      <div class="status__content">
-        <ul>
-          <h4>Board Status: Online <span class="fas fa-solid fa-power-off color__green"> </span> &nbsp&nbsp&nbsp Last Update: 28/12/2021 18:00</h4>
-          
-        </ul>
-      </div>
-      
-    </section>
+  <section class="about" id="about">
+
+    <h3 class="sub-heading"> real time control </h3>
+    <h1 class="heading"> Monitor your grow in the App </h1>
+
+    <div class="row">
+
+        <div class="image">
+            <img src="src/img/StationControlGit.gif" alt="">
+        </div>
+
+        <div class="content">
+            <h3>Maximum quality and productivity.</h3>
+            <p>Cannastation was created to allow passionate people to grow their own plants saving time and money. With an elegant App, growers can automate their entire cultivation. </p>
+            <p>Not only that, we provide guidance and best practices on how to cultivate your station in all phases of growing. Our team of specialists are always keen to help you to obtain the best our of your growth.</p>
+            <div class="icons-container">
+                <div class="icons">
+                    <i class="fas fa-shipping-fast"></i>
+                    <span>free delivery</span>
+                </div>
+                <div class="icons">
+                    <i class="fas fa-dollar-sign"></i>
+                    <span>easy payments</span>
+                </div>
+                <div class="icons">
+                    <i class="fas fa-headset"></i>
+                    <span>24/7 service</span>
+                </div>
+            </div>
+         
+        </div>
+    </div>
+
+  </section>
     
-    <section class="main">
-      <div class="main__data">
-        <h3 class="main__title">🧭 Sensors</h3>
-        <ul class='main__cards'>
-          <li class='sensor__card'>
-            <h3>Temperature</h3>
-            <i class="fas fa-solid fa-temperature-high fa-2x color__green"></i>
-            <h2 id="temperature">18º</h2>
-          </li>
-          <li class='sensor__card'>
-            <h3>Air Humidity</h3>
-            <i class="fas fa-solid fa-wind fa-2x color__red"></i>
-            <h2 id="airHumidity">18º</h2>
-          </li>
-          <li class='sensor__card'>
-            <h3>Soil Humidity</h3>
-            <i class="fas fa-solid fa-spa fa-2x color__green"></i>
-            <h2 id="soilMoisture">18º</h2>
-          </li>
-        </ul>
+        
+        
+<!-- menu section starts  -->
+
+<section class="menu" id="menu">
+
+  <h3 class="sub-heading"> our plans </h3>
+  <h1 class="heading"> the station is for free! </h1>
+
+  <div class="box-container">
+      
+    <div class="box">
+          <div class="image">
+              <img src="src/img/baby.png" alt="">
+          </div>
+          <div class="content">
+              <h3>Monthly Plan</h3>
+              <div class="amount">
+                <span class="currency">CLP$</span>
+                <span class="price">30.000</span>
+                <span class="duration">/mo</span>
+              </div>
+              <div class="features">
+                <ul>
+                  <h4>Sensors:</h4>
+                  <li>Light</li>
+                  <li>Air Humidity</li>
+                  <li>Soil Humidity</li>
+                </ul>
+                <ul>
+                  <h4>Controls:</h4>
+                  <li>Light</li>
+                  <li>Fan</li>
+                  <li>Exhaust</li>
+                  <li>&nbsp</li>
+                </ul>
+              </div>
+              
+              <a href="#" class="btn" id="selectPlanMonthly">Select Plan</a>
+           </div><!-- End content -->
+    </div><!-- End box -->
+    <div class="box">
+      <div class="image">
+          <img src="src/img/planting.png" alt="">
       </div>
-    </section>
+      <div class="content">
+          <h3>Yearly Plan</h3>
+          <div class="amount">
+            <span class="currency">CLP$</span>
+            <span class="price">20.000</span>
+            <span class="duration">/mo</span>
+          </div>
+          <div class="features">
+            <ul>
+              <h4>Sensors:</h4>
+              <li>Light</li>
+              <li>Air Humidity</li>
+              <li>Soil Humidity</li>
+            </ul>
+            <ul>
+              <h4>Controls:</h4>
+              <li>Light</li>
+              <li>Fan</li>
+              <li>Exhaust</li>
+              <li>Water</li>
+            </ul>
+          </div>
+          <a href="#" class="btn" id="selectPlanYearly">Select Plan</a>
+       </div><!-- End content -->
+</div><!-- End box -->
 
-    <section class="main">
-      <div class="main__data">
-        <h3 class="main__title">🕹️ Controls</h3>
-        <ul class='main__cards'>
-          
-          <li class='control__card'>
-            <div class="control__card__head">
-              <h3>Light</h3>
-              <i class="far fa-lightbulb fa-lg color__green fa-2x"></i>
-            </div>
-            <div class="control__card__lines">
-              <ul class="control__line">
-                <li>Online</li>
-                <li class="fas fa-solid fa-power-off color__green"></li>
-              </ul>
-              <ul class="control__line">
-                <li>Turn Off</li>
-                <li><img src="img/icons/toggle_off_black_24dp.svg" alt="logo"></li>
-              </ul>
+  </div><!-- End box container -->
 
-              <ul class="control__line">
-                <li>Mode</li>
-                <li>Manual</li>
-              </ul>
-
-              <ul class="control__line">
-                <button>Advanced</button>
-              </ul>    
-            </div>
-          </li>
-
-          <li class='control__card'>
-            <div class="control__card__head">
-              <h3>Fan</h3>
-              <i class="fas fa-solid fa-fan color__red fa-2x"></i>
-            </div>
-            <div class="control__card__lines">
-              <ul class="control__line">
-                <li>Offline</li>
-                <li class="fas fa-solid fa-power-off color__red"></li>
-              </ul>
-              <ul class="control__line">
-                <li>Turn On</li>
-                <li><img src="img/icons/toggle_off_black_24dp.svg" alt="logo"></li>
-              </ul>
-
-              <ul class="control__line">
-                <li>Mode</li>
-                <li>Manual</li>
-              </ul>
-
-              <ul class="control__line">
-                <button>Advanced</button>
-              </ul>    
-            </div>
-          </li>
+  </section>
+<!-- menu section ends -->
 
 
-          <li class='control__card'>
-            <div class="control__card__head">
-              <h3>Exaust</h3>
-              <i class="fas fa-solid fa-soap fa-2x color__green"></i>
-            </div>
-            <div class="control__card__lines">
-              <ul class="control__line">
-                <li>Online</li>
-                <li class="fas fa-solid fa-power-off color__green"></li>
-              </ul>
-              <ul class="control__line">
-                <li>Turn Off</li>
-                <li><img src="img/icons/toggle_off_black_24dp.svg" alt="logo"></li>
-              </ul>
 
-              <ul class="control__line">
-                <li>Mode</li>
-                <li>Manual</li>
-              </ul>
-
-              <ul class="control__line">
-                <button>Advanced</button>
-              </ul>    
-            </div>
-          </li>
-
-
-          <li class='control__card'>
-            <div class="control__card__head">
-              <h3>Water</h3>
-              <i class="fas fa-solid fa-shower fa-2x color__red"></i>
-            </div>
-            <div class="control__card__lines">
-              <ul class="control__line">
-                <li>Offline</li>
-                <li class="fas fa-solid fa-power-off color__red"></li>
-              </ul>
-              <ul class="control__line">
-                <li>Turn On</li>
-                <li><img src="img/icons/toggle_off_black_24dp.svg" alt="logo"></li>
-              </ul>
-
-              <ul class="control__line">
-                <li>Mode</li>
-                <li>Manual</li>
-              </ul>
-
-              <ul class="control__line">
-                <button>Advanced</button>
-              </ul>    
-            </div>
-          </li>
-
-          </li>
-        </ul>
-      </div>
-    </section>
-  </main>
-  
   <footer></footer>
+  
+  <script src="dist/index.bundle.js"></script>
+  <!-- <script src='src/js/station.js'></script>
+  <script src='src/js/modal.js'></script> -->
   
 </body>
 </html>
