@@ -7,6 +7,10 @@
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
 /******/ (() => { // webpackBootstrap
+<<<<<<< HEAD
+/******/ 	"use strict";
+/******/ 	
+=======
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./node_modules/@firebase/auth/dist/esm2017/index-1679a2b2.js":
@@ -235,6 +239,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval-source-map devtool is used.
 /******/ 	var __webpack_exports__ = __webpack_require__("./src/js/product.js");
+>>>>>>> cf10f2f9df0d09c880407e23dd1f8ca63eadbb04
 /******/ 	
 /******/ })()
 ;
